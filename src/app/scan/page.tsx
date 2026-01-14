@@ -13,10 +13,8 @@ export default function ScanPage() {
     const handleScan = async (result: string) => {
         if (!result || !scanning) return;
 
-        // Stop scanning immediately after one successful read to prevent multiple API calls
         setScanning(false);
 
-        // The result is the friend's ID
         const friendId = result;
         const userId = localStorage.getItem("userId");
 
@@ -39,8 +37,6 @@ export default function ScanPage() {
                 setTimeout(() => router.push("/dashboard"), 1500);
             } else {
                 setError(data.error || "Failed to add friend");
-                // Resume scanning after error if user wants to try again (button click?)
-                // For now, let's just show error.
             }
         } catch (err) {
             setError("Network error");

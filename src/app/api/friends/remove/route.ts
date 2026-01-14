@@ -24,11 +24,9 @@ export async function POST(request: Request) {
             );
         }
 
-        // Remove friendId from user's friends list
         user.friends = user.friends.filter((id: any) => id.toString() !== friendId);
         await user.save();
 
-        // Remove userId from friend's friends list
         friend.friends = friend.friends.filter((id: any) => id.toString() !== userId);
         await friend.save();
 

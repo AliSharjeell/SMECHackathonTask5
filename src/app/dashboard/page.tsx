@@ -76,7 +76,6 @@ export default function Dashboard() {
     return (
         <div className="min-h-screen bg-zinc-950 p-4 md:p-8">
             <div className="max-w-4xl mx-auto space-y-8">
-                {/* Header */}
                 <div className="flex justify-between items-center bg-zinc-900 border border-zinc-800 p-6 rounded-2xl shadow-xl">
                     <div>
                         <h1 className="text-2xl font-bold text-zinc-100">
@@ -96,7 +95,6 @@ export default function Dashboard() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
-                    {/* QR Code Section */}
                     <div className="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl shadow-xl flex flex-col items-center space-y-6">
                         <h2 className="text-xl font-bold text-zinc-100">Your Friend Code</h2>
                         <div className="bg-white p-4 rounded-xl border border-zinc-700">
@@ -107,9 +105,7 @@ export default function Dashboard() {
                         </p>
                     </div>
 
-                    {/* Action & Friends List Section */}
                     <div className="space-y-8">
-                        {/* Scan Button */}
                         <div className="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl shadow-xl text-center">
                             <h3 className="text-lg font-medium text-zinc-300 mb-4">
                                 Add a New Friend
@@ -122,7 +118,6 @@ export default function Dashboard() {
                             </button>
                         </div>
 
-                        {/* Friends List */}
                         <div className="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl shadow-xl">
                             <h2 className="text-xl font-bold text-zinc-100 mb-4">Friends List</h2>
                             {user.friends.length === 0 ? (
